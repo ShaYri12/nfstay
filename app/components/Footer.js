@@ -1,4 +1,6 @@
 import React from "react";
+import { FaFacebookF, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -80,67 +82,24 @@ const Footer = () => {
       </div>
       <div class="border-t h-min" bis_skin_checked="1">
         <div
-          class="max-w-[1200px] h-min mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+          class="max-w-[1200px] h-min mx-auto py-[32px] pb-[19px] px-[20px] flex flex-wrap flex-col sm:flex-row"
           bis_skin_checked="1"
         >
           <p class="text-[500] text-[16px] leading-[30px] text-center sm:text-left opacity-[0.6]">
             ©2024 NFsTay. All rights reserved
           </p>
-          <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-            <a class="text-gray-500">
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-              </svg>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 gap-[40px] justify-center sm:justify-start opacity-[0.4]">
+            <a class="" href="#" target="_blank">
+              <FaFacebookF size={21} />
             </a>
-            <a class="ml-3 text-gray-500">
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-              </svg>
+            <a class="" href="#" target="_blank">
+              <FaInstagram size={21} />
             </a>
-            <a class="ml-3 text-gray-500">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-              </svg>
+            <a class="" href="#" target="_blank">
+              <FaTwitter size={21} />
             </a>
-            <a class="ml-3 text-gray-500">
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="0"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="none"
-                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-                ></path>
-                <circle cx="4" cy="4" r="2" stroke="none"></circle>
-              </svg>
+            <a class="" href="#" target="_blank">
+              <FaLinkedin size={21} />
             </a>
           </span>
         </div>
