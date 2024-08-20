@@ -90,16 +90,16 @@ const Footer = () => {
           </p>
           <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 gap-[40px] justify-center sm:justify-start opacity-[0.4]">
             <a class="" href="#" target="_blank">
-              <FaFacebookF size={21} />
+              <FaFacebookF size={21} color="#0B0924" />
             </a>
             <a class="" href="#" target="_blank">
-              <FaInstagram size={21} />
+              <FaInstagram size={21} color="#0B0924" />
             </a>
             <a class="" href="#" target="_blank">
-              <FaTwitter size={21} />
+              <FaTwitter size={21} color="#0B0924" />
             </a>
             <a class="" href="#" target="_blank">
-              <FaLinkedin size={21} />
+              <FaLinkedin size={21} color="#0B0924" />
             </a>
           </span>
         </div>
