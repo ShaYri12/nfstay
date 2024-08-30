@@ -1,134 +1,192 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
+import { IoMenu } from "react-icons/io5";
+import { FiX } from "react-icons/fi";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setIsMenuOpen(false);
-    }
-  };
+  const pathname = usePathname();
 
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  const sidebarLinks = [
+    {
+      title: "General",
+      links: [
+        {
+          href: "/dashboard",
+          label: "Dashboard",
+          icon: "/assets/dashboard.svg",
+        },
+        // {
+        //   href: "/box",
+        //   label: "Inbox",
+        //   icon: "/assets/inbox.svg",
+        // },
+        {
+          href: "/settings",
+          label: "Settings",
+          icon: "/assets/settings.svg",
+        },
+        {
+          href: "/Docs",
+          label: "Docs",
+          icon: "/assets/docs.svg",
+        },
+      ],
+    },
+    {
+      title: "Buy to Let",
+      links: [
+        {
+          href: "/marketplace",
+          label: "Marketplace",
+          icon: "/assets/dashboard.svg",
+        },
+        {
+          href: "/upcoming",
+          label: "Upcoming",
+          icon: "/assets/dashboard.svg",
+        },
+        {
+          href: "/secondary-market",
+          label: "Secondary Market",
+          icon: "/assets/dashboard.svg",
+        },
+        {
+          href: "/favorites",
+          label: "Favorites",
+          icon: "/assets/dashboard.svg",
+        },
+      ],
+    },
+    {
+      title: "Defi",
+      links: [
+        {
+          href: "/overview",
+          label: "Overview",
+          icon: "/assets/dashboard.svg",
+        },
+        {
+          href: "/farm-liquidity",
+          label: "Farm (Liquidity)",
+          icon: "/assets/dashboard.svg",
+        },
+        {
+          href: "/printer",
+          label: "Printer",
+          icon: "/assets/dashboard.svg",
+        },
+      ],
+    },
+    {
+      title: "My Profile",
+      links: [
+        {
+          href: "/Portfolio",
+          label: "Portfolio",
+          icon: "/assets/dashboard.svg",
+        },
+        {
+          href: "/Payouts",
+          label: "Payouts",
+          icon: "/assets/dashboard.svg",
+        },
+      ],
+    },
+    {
+      title: "Join the team",
+      links: [
+        {
+          href: "/Estate Agent",
+          label: "Estate Agent",
+          icon: "/assets/dashboard.svg",
+        },
+      ],
+    },
+  ];
 
   return (
-    <header className="text-gray-600 body-font">
-      <div className="max-w-[1200px] mx-auto flex p-5 items-center justify-between">
-        {/* Logo */}
-        <a className="flex title-font font-medium items-center text-gray-900 h-[32px]">
-          <img src="/assets/logo.svg" alt="logo" />
-        </a>
-
-        {/* Hamburger Button for Mobile Menu */}
-        <button
-          className="lg:hidden text-gray-600 focus:outline-none"
-          onClick={toggleMenu}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d={
-                isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
-              }
-            ></path>
-          </svg>
+    <header className="bg-white fixed z-50 lg:static border-b border-[#EEEEEE] w-full px-3 sm:px-[35px] h-[100px] flex justify-between items-center">
+      <div className="flex items-center gap-2 sm:gap-4">
+        <button onClick={toggleMobileMenu} className="lg:hidden block">
+          <IoMenu className="w-[35px] h-[35px]" />
         </button>
+      </div>
 
-        {/* Desktop Navigation + Buttons */}
-        <div className="hidden lg:flex items-center space-x-8">
-          <nav className="flex space-x-4 text-[16px] leading-[20.16px] text-primary-color font-[500]">
-            <a className="hover:text-gray-900">How it works</a>
-            <a className="hover:text-gray-900">Features</a>
-            <a className="hover:text-gray-900">Marketplace</a>
-            <a className="hover:text-gray-900">Advantages</a>
-            <a className="hover:text-gray-900">FAQ</a>
-          </nav>
-          <div className="inline-flex gap-[22px]">
-            <button className="font-[600] text-[16px] leading-[20.16px] text-[#9945FF] py-[14.5px] px-[37px] bg-white border border-[#9945FF] rounded-full">
-              Login
-            </button>
-            <button
-              className="text-white font-[600] text-[16px] leading-[20.16px] py-[14.5px] px-[37px] rounded-full"
-              style={{
-                background:
-                  "linear-gradient(90.69deg, #9945FF -0.25%, #20E19F 100%)",
-              }}
-            >
-              Invest Now
-            </button>
-          </div>
+      <div className="flex items-center gap-5">
+        <button>
+          <Image
+            src="/assets/icons/setting-icon.svg"
+            alt="setting-icon"
+            width={28}
+            height={28}
+          />
+        </button>
+        <button>
+          <Image
+            src="/assets/icons/bell-icon.svg"
+            alt="bell-icon"
+            width={28}
+            height={28}
+          />
+        </button>
+        <button className="bg-custom-gradient text-white h-[50px] w-[170px] px-[14px] rounded-[1111px] md:text-[14px] text-[16px] font-jakarta leading-[20px] font-semibold flex items-center justify-between">
+          <Image
+            src="/assets/profile.svg"
+            alt="wallet"
+            width={30}
+            height={30}
+            className="md:w-[30px] md:h-[30px] w-[20px] h-[20px]"
+          />
+          1ygqYRB7Q..
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-[100px] left-0 w-full h-full bg-white shadow-lg flex-col flex transform py-6 px-4 ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+          } transition-transform duration-500 ease-in-out z-50`}
+      >
+        <div className="mb-8 flex items-center gap-3">
+          <Image src="/assets/Logo.svg" alt="avatar" width={149} height={32} />
         </div>
 
-        {/* Mobile Menu */}
-        <div
-          ref={menuRef}
-          className={`fixed inset-y-0 right-0 transform bg-white w-2/3 max-w-xs p-5 lg:hidden flex flex-col items-center space-y-6 shadow-lg transition-transform duration-300 ease-in-out ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          {/* Close Button */}
-          <button
-            className="self-end text-gray-600 focus:outline-none"
-            onClick={toggleMenu}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </button>
-
-          {/* Mobile Navigation */}
-          <nav className="flex flex-col items-center space-y-4 text-[16px] leading-[20.16px] text-primary-color font-[500]">
-            <a className="hover:text-gray-900">How it works</a>
-            <a className="hover:text-gray-900">Features</a>
-            <a className="hover:text-gray-900">Marketplace</a>
-            <a className="hover:text-gray-900">Advantages</a>
-            <a className="hover:text-gray-900">FAQ</a>
-          </nav>
-
-          {/* Buttons */}
-          <div className="inline-flex lg:flex-row flex-col gap-[22px] w-fit">
-            <button className="font-[600] text-[16px] leading-[20.16px] text-[#9945FF] py-[14.5px] px-[37px] bg-white border border-[#9945FF] rounded-full">
-              Login
-            </button>
-            <button
-              className="text-white w-max font-[600] text-[16px] leading-[20.16px] py-[14.5px] px-[37px] rounded-full"
-              style={{
-                background:
-                  "linear-gradient(90.69deg, #9945FF -0.25%, #20E19F 100%)",
-              }}
-            >
-              Invest Now
-            </button>
+        <div className="my-14">
+          <div className="flex flex-col gap-10 w-full">
+            {sidebarLinks.map((section, index) => (
+              <div key={index} className="flex flex-col gap-[15px] w-full">
+                <h3 className="text-[16px] font-bold text-[#0C0839] font-jakarta">
+                  {section.title}
+                </h3>
+                <div className="flex flex-col gap-[15px]">
+                  {section.links.map((link, idx) => (
+                    <Link key={idx} href={link.href}>
+                      <div className="flex items-center gap-2 w-full rounded-[10px]">
+                        {link.icon && (
+                          <Image
+                            src={link.icon}
+                            alt="icon"
+                            width={22}
+                            height={22}
+                          />
+                        )}
+                        <h2 className="text-[16px] leading-[20px] font-medium text-[#0C0839] font-jakarta text-opacity-60">
+                          {link.label}
+                        </h2>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

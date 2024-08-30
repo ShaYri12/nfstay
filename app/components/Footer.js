@@ -1,111 +1,51 @@
-import React from "react";
-import { FaFacebookF, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
+
 
 const Footer = () => {
-  return (
-    <footer class="bg-white">
-      <div
-        class="max-w-[1200px] px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap justify- w-full flex-col"
-        bis_skin_checked="1"
-      >
-        <div
-          class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left"
-          bis_skin_checked="1"
-        >
-          <a class="flex items-center mb-4 md:mb-0 h-[32px]">
-            <img src="/assets/logo.svg" alt="logo" />
-          </a>
+    return (
+      <footer className="bg-white w-full">
+        <div className="py-20 max-w-[1130px] w-full mx-auto flex items-start justify-between px-3.5 sm:px-5 gap-10 md:flex-row flex-col">
+            <Image src='/assets/Logo.svg' alt="Logo" width={149} height={32} />
+            <div className="flex items-start justify-between max-w-[714px] w-full gap-2 flex-wrap sm:flex-nowrap">
+                <ul className="max-w-[100px] sm:max-w-[200px] w-full">
+                    <h3 className="text-[#0C0839] text-[14px] sm:text-[16px] leading-[24px] tracking-[-1%] font-bold font-jakarta mb-4">SELL A HOME</h3>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta text-nowrap">Request an offer</li>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta">Pricing</li>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta">Reviews</li>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta">Stories</li>
+                </ul>
+                <ul className="max-w-[100px] sm:max-w-[200px] w-full">
+                    <h3 className="text-[#0C0839] text-[14px] sm:text-[16px] leading-[24px] tracking-[-1%] font-bold font-jakarta mb-4">ABOUT</h3>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta">Company</li>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta">How it works</li>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta">Contact</li>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta">Investors</li>
+                </ul>
+                <ul className="max-w-[100px] sm:max-w-[200px] w-full">
+                    <h3 className="text-[#0C0839] text-[14px] sm:text-[16px] leading-[24px] tracking-[-1%] font-bold font-jakarta mb-4">RESOURCES</h3>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta">Blog</li>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta">Guides</li>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta">FAQ</li>
+                    <li className="text-[#0C0839] opacity-60 font-medium text-[14px] sm:text-[16px] leading-[42px] font-jakarta">Help Center</li>
+                </ul>
+            </div>
         </div>
-        <div
-          class="flex-grow flex md:flex-nowrap flex-wrap -mb-10 md:mt-0 mt-10 md:text-left text-center justify-center"
-          bis_skin_checked="1"
-        >
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4" bis_skin_checked="1">
-            <h2 class="font-[700] text-[16px] leading-[24px] tracking-[-1%] mb-[16px]">
-              SELL A HOME
-            </h2>
-            <nav class="list-none font-[500] text-[16px] leading-[42px] opacity-[0.6]">
-              <li>
-                <a class="hover:text-gray-900">Request an offer</a>
-              </li>
-              <li>
-                <a class="hover:text-gray-900">Pricing</a>
-              </li>
-              <li>
-                <a class="hover:text-gray-900">Reviews</a>
-              </li>
-              <li>
-                <a class="hover:text-gray-900">Stories</a>
-              </li>
-            </nav>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4" bis_skin_checked="1">
-            <h2 class="font-[700] text-[16px] leading-[24px] tracking-[-1%] mb-[16px]">
-              ABOUT
-            </h2>
-            <nav class="list-none font-[500] text-[16px] leading-[42px] opacity-[0.6]">
-              <li>
-                <a class="hover:text-gray-800">Company</a>
-              </li>
-              <li>
-                <a class="hover:text-gray-800">How it works</a>
-              </li>
-              <li>
-                <a class="hover:text-gray-800">Contact</a>
-              </li>
-              <li>
-                <a class="hover:text-gray-800">Investors</a>
-              </li>
-            </nav>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4" bis_skin_checked="1">
-            <h2 class="font-[700] text-[16px] leading-[24px] tracking-[-1%] mb-[16px]">
-              RESOURCES
-            </h2>
-            <nav class="list-none font-[500] text-[16px] leading-[42px] opacity-[0.6]">
-              <li>
-                <a class="hover:text-gray-800">Blog</a>
-              </li>
-              <li>
-                <a class="hover:text-gray-800">Guides</a>
-              </li>
-              <li>
-                <a class="hover:text-gray-800">FAQ</a>
-              </li>
-              <li>
-                <a class="hover:text-gray-800">Help Center</a>
-              </li>
-            </nav>
-          </div>
+        
+        <div className="border-t-2 border-[#0C0839] border-opacity-10 py-8 px-5">
+            <div className="max-w-[1130px] w-full mx-auto flex items-center justify-between sm:flex-row flex-col gap-5">
+                <h3 className="text-[#0C0839] text-opacity-60 text-[16px] leading-[30px] font-medium">©2024 NFsTay. All rights reserved</h3>
+                <div className="opacity-60 flex items-center gap-5 md:gap-10">
+                    <Link href='/'><Image src='/assets/facebook.svg' alt="Facebook" width={24} height={24}/></Link>
+                    <Link href='/'><Image src='/assets/instagram.svg' alt="Facebook" width={24} height={24}/></Link>
+                    <Link href='/'><Image src='/assets/twitter.svg' alt="Facebook" width={24} height={24}/></Link>
+                    <Link href='/'><Image src='/assets/linkedin.svg' alt="Facebook" width={24} height={24}/></Link>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="border-t h-min" bis_skin_checked="1">
-        <div
-          class="max-w-[1200px] h-min mx-auto py-[32px] pb-[19px] px-[20px] flex flex-wrap flex-col sm:flex-row"
-          bis_skin_checked="1"
-        >
-          <p class="text-[500] text-[16px] leading-[30px] text-center sm:text-left opacity-[0.6]">
-            ©2024 NFsTay. All rights reserved
-          </p>
-          <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 gap-[40px] justify-center sm:justify-start opacity-[0.4]">
-            <a class="" href="#" target="_blank">
-              <FaFacebookF size={21} color="#0B0924" />
-            </a>
-            <a class="" href="#" target="_blank">
-              <FaInstagram size={21} color="#0B0924" />
-            </a>
-            <a class="" href="#" target="_blank">
-              <FaTwitter size={21} color="#0B0924" />
-            </a>
-            <a class="" href="#" target="_blank">
-              <FaLinkedin size={21} color="#0B0924" />
-            </a>
-          </span>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;
+      </footer>
+    );
+  };
+  
+  export default Footer;
+  
