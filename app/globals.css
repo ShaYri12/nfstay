@@ -93,3 +93,43 @@ input:checked + .toggleSwitch {
 input:checked + .toggleSwitch::before {
   transform: translateX(15.5px);
 }
+
+/* voting page */
+.vote-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.time-card {
+  min-width: 349px;
+}
+
+@media screen and (max-width: 1149px) {
+  .vote-card {
+    flex-direction: column;
+  }
+  .time-card {
+    max-width: 100% !important;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .vote-card {
+    flex-direction: row;
+  }
+  .time-card {
+    max-width: 349px;
+    min-width: 349px;
+  }
+}
+
+@media screen and (max-width: 849px) {
+  .vote-card {
+    flex-direction: column;
+  }
+  .time-card {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
