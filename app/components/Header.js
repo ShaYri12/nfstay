@@ -152,8 +152,9 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-[100px] left-0 w-full h-full bg-white shadow-lg flex-col flex transform py-6 px-4 ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-500 ease-in-out z-50`}
+        className={`fixed top-[100px] left-0 w-full h-full bg-white shadow-lg flex-col flex transform py-6 px-4 ${
+          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-500 ease-in-out z-50`}
       >
         <div className="mb-8 flex items-center gap-3">
           <Image src="/assets/Logo.svg" alt="avatar" width={149} height={32} />

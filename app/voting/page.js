@@ -27,8 +27,11 @@ const Voting = () => {
   ];
   return (
     <DashboardLayout>
-      <div className="flex flex-col gap-[60px]">
-        <div className="vote-card text-primary-color justify-between rounded-lg px-3 md:px-[25px] pt-[120px] lg:pt-[32px] gap-[25px]">
+      <h2 className="text-[32px] leading-[40.32px] tracking-[-2%] font-[700] text-primary-color pt-[120px] lg:pt-[32px] pb-[32px] px-[25px]">
+        Voting
+      </h2>
+      <div className="flex flex-col gap-[60px] pb-[80px]">
+        <div className="vote-card text-primary-color justify-between rounded-lg px-3 md:px-[25px]  gap-[25px]">
           <div
             className="bg-white flex items-center md:items-start lg:p-[25px] p-[10px] rounded-[14px]"
             style={{ boxShadow: "0px 0px 11.7px 0px #00000026" }}
@@ -361,7 +364,7 @@ const Voting = () => {
           </div>
         </div>
 
-        <div className="bg-white text-primary-color pb-[80px]">
+        <div className="bg-white text-primary-color">
           <h2 className="md:text-[32px] text-[25px] md:leading-[40.32px] tracking-[-2%] font-[700] text-primary-color md:pb-[30px] pb-[16px] px-[25px]">
             Recent Proposals
           </h2>
