@@ -194,7 +194,7 @@ const Voting = () => {
             </div>
           </div>
         </div>
-        <div className="vote-card text-primary-color justify-between rounded-lg px-3 md:px-[25px] pt-[120px] lg:pt-[32px] gap-[25px]">
+        <div className="vote-card text-primary-color justify-between rounded-lg px-3 md:px-[25px] gap-[25px]">
           <div
             className="bg-white flex items-center md:items-start lg:p-[25px] p-[10px] rounded-[14px]"
             style={{ boxShadow: "0px 0px 11.7px 0px #00000026" }}
@@ -362,7 +362,7 @@ const Voting = () => {
         </div>
 
         <div className="bg-white text-primary-color pb-[80px]">
-          <h2 className="md:text-[32px] text-[25px] md:leading-[40.32px] tracking-[-2%] font-[700] text-primary-color pt-[32px] md:pb-[30px] pb-[16px] px-[25px]">
+          <h2 className="md:text-[32px] text-[25px] md:leading-[40.32px] tracking-[-2%] font-[700] text-primary-color md:pb-[30px] pb-[16px] px-[25px]">
             Recent Proposals
           </h2>
           <div className="overflow-x-auto px-[25px]">
@@ -396,25 +396,25 @@ const Voting = () => {
                       index !== recentProposals - 1 ? "border-b" : ""
                     }`}
                   >
-                    <td className="font-[600] text-[16px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center">
+                    <td className="font-[600] md:text-[16px] text-[14px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center">
                       {proposal.id}
                     </td>
-                    <td className="font-[600] text-[16px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center min-w-[126px]">
+                    <td className="font-[600] md:text-[16px] text-[14px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center min-w-[126px]">
                       {proposal.name}
                     </td>
-                    <td className="font-[600] text-[16px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center">
+                    <td className="font-[600] md:text-[16px] text-[14px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center">
                       {proposal.propertyType}
                     </td>
-                    <td className="font-[600] text-[16px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center">
+                    <td className="font-[600] md:text-[16px] text-[14px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center">
                       {proposal.date}
                     </td>
-                    <td className="font-[600] text-[16px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center">
+                    <td className="font-[600] md:text-[16px] text-[14px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center">
                       {proposal.votes}
                     </td>
-                    <td className="font-[600] text-[16px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center">
+                    <td className="font-[600] md:text-[16px] text-[14px] leading-[23px] text-primary-color px-[23px] py-[20px] text-center">
                       {proposal.noOfOwners}
                     </td>
-                    <td className="font-[600] text-[#8165EC] text-[16px] leading-[23px] px-[23px] py-[20px] text-center">
+                    <td className="font-[600] text-[#8165EC] md:text-[16px] text-[14px] leading-[23px] px-[23px] py-[20px] text-center">
                       {proposal.proposal}
                     </td>
                   </tr>
