@@ -1,13 +1,43 @@
 import React from "react";
 import { HiCalculator } from "react-icons/hi";
-import { IoIosInformationCircleOutline } from "react-icons/io";
+import {
+  IoIosArrowBack,
+  IoIosArrowForward,
+  IoIosInformationCircleOutline,
+} from "react-icons/io";
 
 const YourProperties = () => {
   return (
     <section className="relative flex flex-col pb-[25px]">
-      <h2 className="md:text-[32px] text-[25px] leading-[40.32px] tracking-[-2%] font-[700] text-primary-color mb-[40px]">
-        Your Properties
-      </h2>
+      <div className="flex justify-between">
+        <h2 className="md:text-[32px] text-[25px] leading-[40.32px] tracking-[-2%] font-[700] text-primary-color mb-[40px]">
+          Your Properties
+        </h2>
+        <div className="flex gap-[10px]">
+          <button
+            className="w-[34px] h-[34px] rounded-full flex items-center justify-center opacity-[0.5] border border-[#0C08391A]"
+            style={{
+              boxShadow: `
+            0px 2px 4px 0px #00000014,
+            0px 0px 6px 0px #00000005;
+            `,
+            }}
+          >
+            <IoIosArrowBack />
+          </button>
+          <button
+            className="w-[34px] h-[34px] rounded-full flex items-center justify-center border border-[#0C08391A]"
+            style={{
+              boxShadow: `
+            0px 2px 4px 0px #00000014,
+            0px 0px 6px 0px #00000005;
+            `,
+            }}
+          >
+            <IoIosArrowForward />
+          </button>
+        </div>
+      </div>
       <div className="flex md:flex-row flex-col lg:gap-[20px] gap-[15px]">
         <div className="flex-grow bg-white rounded-[16px] shadow-lg border border-[#0C08391A]">
           <div className="relative rounded-t-[16px]">
