@@ -7,10 +7,10 @@ const MapComponent = dynamic(() => import("../components/MapComponent"), {
 
 const Location = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-[35px] mt-[45px] px-[25px] pb-[60px]">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-[35px] mt-[45px] md:px-[15px] px-[12px] pb-[60px]">
       {/* Location Section */}
       <div
-        className="px-[25px] py-[20px] bg-white rounded-[14px]"
+        className="md:px-[25px] px-[12px] py-[20px] bg-white rounded-[14px]"
         style={{ boxShadow: "0px 0px 11.7px 0px #00000026" }}
       >
         <h2 className="text-[20px] leading-[25.2px] text-primary-color font-[600] mb-[15px]">
@@ -24,13 +24,13 @@ const Location = () => {
       {/* Purchase Section */}
       <div className="flex flex-col justify-between">
         <div className="flex justify-between items-center gap-[5px]">
-          <div className="flex flex-col text-primary-color gap-[12px]">
+          <div className="flex flex-col text-primary-color md:gap-[12px] gap-[8px]">
             <span className="text-[12px] leading-[15px] font-[400]">
               CURRENT PRICE
             </span>
-            <div className="text-[32px] leading-[32px] font-[700]">
+            <div className="md:text-[32px] text-[25px] leading-[32px] font-[700]">
               $860{" "}
-              <span className="text-[14px] font-[600] leading-[32px]">
+              <span className="md:text-[14px] text-[13px] font-[600] leading-[32px]">
                 (1.5 BNB)
               </span>
             </div>
@@ -38,13 +38,13 @@ const Location = () => {
 
           {/* Quantity Selector */}
           <div className="flex items-center justify-between gap-1 bg-[#8165EC] flex-grow max-w-[185px] bg-opacity-[0.1] text-primary-color rounded-full p-[10px]">
-            <button className="w-[38px] h-[38px] rounded-full bg-white flex items-center justify-center">
+            <button className="md:w-[38px] w-[30px] md:h-[38px] h-[30px] rounded-full bg-white flex items-center justify-center">
               <span className="text-[30px] mt-[-5.5px]">-</span>
             </button>
-            <span className="text-[28px] font-[600] text-[#954AFC] leading-[35.28px]">
+            <span className="md:text-[28px] text-[23px] font-[600] text-[#954AFC] leading-[35.28px]">
               2
             </span>
-            <button className="w-[38px] h-[38px] rounded-full bg-white text-lg flex items-center justify-center">
+            <button className="md:w-[38px] w-[30px] md:h-[38px] h-[30px] rounded-full bg-white text-lg flex items-center justify-center">
               <span className="text-[28px] mt-[-7px]">+</span>
             </button>
           </div>
@@ -62,7 +62,7 @@ const Location = () => {
 
         {/* Progress Bar */}
         <div className="mt-[20px]">
-          <p className="text-[20] leading-[32px] font-[700] text-primary-color">
+          <p className="md:text-[20px] text-[15px] leading-[32px] font-[700] text-primary-color">
             795,540 of 860,000 shares bought
           </p>
           <div className="w-full bg-[#0000000D] rounded-full h-[26px] mt-[7px]">

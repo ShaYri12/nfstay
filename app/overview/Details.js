@@ -6,11 +6,11 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 
 const Details = () => {
   return (
-    <div className="flex lg:flex-row flex-col gap-[35px] p-[25px] bg-white rounded-xl">
+    <div className="flex lg:flex-row flex-col gap-[30px] md:px-[25px] px-[12px] bg-white">
       <div className="relative">
         <img
           src="/assets/overview-img.png"
-          className="lg:w-[510px] min-w-[330px] h-full rounded-xl object-cover"
+          className="lg:w-[510px] min-w-[330px] h-full rounded-[18px] object-cover"
           alt="Property Image"
         />
         <div className="absolute top-[22px] left-[21px] bg-white rounded-[36px] flex items-center justify-center">
@@ -42,30 +42,30 @@ const Details = () => {
           </span>
         </div>
 
-        <h2 className="text-primary-color lg:text-[32px] md:text-[25px] font-[700] leading-[40.32px] tracking-[-2%] mt-[16px]">
+        <h2 className="text-primary-color lg:text-[28px] md:text-[25px] font-[700] leading-[40.32px] tracking-[-2%] mt-[16px]">
           Authentic 3-Bedroom Penthouse with a Private Terrace
         </h2>
 
-        <div className="grid  grid-cols-2 sm:grid-cols-4 flex-warp items-center gap-[30px] text-primary-color text-[15px] font-[600] leading-[21px] my-[30px]">
-          <span className="flex w-max gap-[6px] items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-4 flex-warp items-center gap-[30px] text-primary-color text-[15px] font-[600] leading-[21px] my-[30px]">
+          <span className="flex w-max gap-[6px] items-center text-[14px]">
             <span className="w-[20px] h-[20px] opacity-[0.5]">
               <LuUsers size={20} />
             </span>
             650 Owners
           </span>
-          <span className="flex gap-[6px] items-center">
+          <span className="flex gap-[6px] items-center text-[14px]">
             <span className="w-[20px] h-[20px] opacity-[0.5]">
               <LuCodesandbox size={20} />
             </span>
             1000 Total NFTs
           </span>
-          <span className="flex gap-[6px] items-center">
+          <span className="flex gap-[6px] items-center text-[14px]">
             <span className="w-[20px] h-[20px] opacity-[0.5]">
               <FiEye size={20} />
             </span>
             0 Views
           </span>
-          <span className="flex gap-[6px] items-center">
+          <span className="flex gap-[6px] items-center text-[14px]">
             <span className="w-[20px] h-[20px] opacity-[0.5]">
               <FaRegHeart size={20} />
             </span>
@@ -73,37 +73,37 @@ const Details = () => {
           </span>
         </div>
 
-        <div className="grid grid-cols-2 gap-[15px]">
-          <div className="flex flex-col gap-[17px] bg-[#F5F5F5] p-[16px] rounded-[14px]">
-            <h3 className="text-[16px] leading-[24px] font-[400] text-primary-color">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-[15px]">
+          <div className="flex flex-col md:gap-[17px] gap-[10px] bg-[#F5F5F5] p-[16px] rounded-[14px]">
+            <h3 className="md:text-[15px] text-[14px] leading-[24px] font-[400] text-primary-color">
               Property Listing Price
             </h3>
-            <p className="text-[30px] leading-[37.8px] font-[700] text-primary-color">
+            <p className="md:text-[24px] text-[17px] leading-[37.8px] font-[700] text-primary-color">
               860,000 USD
             </p>
           </div>
-          <div className="flex flex-col gap-[17px] bg-[#F5F5F5] p-[16px] rounded-[14px]">
-            <h3 className="text-[16px] leading-[24px] font-[400] text-primary-color">
+          <div className="flex flex-col md:gap-[17px] gap-[10px] bg-[#F5F5F5] p-[16px] rounded-[14px]">
+            <h3 className="md:text-[15px] text-[14px] leading-[24px] font-[400] text-primary-color">
               Annual Yield
             </h3>
-            <p className="text-[30px] leading-[37.8px] font-[700] text-primary-color">
+            <p className="md:text-[24px] text-[17px] leading-[37.8px] font-[700] text-primary-color">
               14.86%
             </p>
           </div>
-          <div className="flex flex-col gap-[17px] bg-[#F5F5F5] p-[16px] rounded-[14px]">
-            <h3 className="text-[16px] leading-[24px] font-[400] text-primary-color">
+          <div className="flex flex-col md:gap-[17px] gap-[10px] bg-[#F5F5F5] p-[16px] rounded-[14px]">
+            <h3 className="md:text-[15px] text-[14px] leading-[24px] font-[400] text-primary-color">
               6 YR Expected Asset Appreciation
             </h3>
-            <p className="text-[30px] leading-[37.8px] font-[700] text-primary-color">
+            <p className="md:text-[24px] text-[17px] leading-[37.8px] font-[700] text-primary-color">
               20%
             </p>
           </div>
-          <div className="flex flex-col gap-[17px] bg-[#F5F5F5] p-[16px] rounded-[14px]">
-            <h3 className="flex gap-[9px] items-center text-[16px] leading-[24px] font-[400] text-primary-color">
+          <div className="flex flex-col md:gap-[17px] gap-[10px] bg-[#F5F5F5] p-[16px] rounded-[14px]">
+            <h3 className="flex gap-[9px] items-center md:text-[15px] text-[14px] leading-[24px] font-[400] text-primary-color">
               6 YR Expected ROI
               <IoIosInformationCircleOutline />
             </h3>
-            <p className="text-[30px] leading-[37.8px] font-[700] text-primary-color">
+            <p className="md:text-[24px] text-[17px] leading-[37.8px] font-[700] text-primary-color">
               109.12%
             </p>
           </div>

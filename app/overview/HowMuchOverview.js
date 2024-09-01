@@ -3,18 +3,18 @@ import { BiDollar } from "react-icons/bi";
 
 const HowMuchOverview = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-[26px] px-[25px] pb-[60px]">
+    <div className="flex flex-col md:flex-row gap-[26px] md:px-[15px] px-[12px] pb-[60px]">
       {/* Left Section */}
       <div
         className="flex-grow rounded-[14px] bg-white"
         style={{ boxShadow: "0px 0px 11.7px 0px #00000026" }}
       >
-        <h3 className="text-[16px] font-[600] leading-[25.2px] text-primary-color px-[23px] pt-[24px] pb-[16px]">
+        <h3 className="md:text-[18px] text-[16px] font-[600] leading-[25.2px] text-primary-color px-[23px] pt-[24px] pb-[16px]">
           How much can you earn with this Property?
         </h3>
-        <div className="grid grid-cols-2 gap-x-[18px] gap-y-[32px] mb-4 p-[25px] border-t border-t-[#0C0839] border-opacity-[0.2]">
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-x-[18px] md:gap-y-[32px] gap-[25px] mb-4 p-[25px] border-t border-t-[#0C0839] border-opacity-[0.2]">
           <div className="text-primary-color">
-            <label className="block opacity-[0.5] text-[16px] font-[500] leading-[27px] mb-[8px]">
+            <label className="block opacity-[0.5] md:text-[16px] text-[14px] font-[500] leading-[27px] mb-[8px]">
               Initial Amount
             </label>
             <div className="relative">
@@ -32,7 +32,7 @@ const HowMuchOverview = () => {
             </div>
           </div>
           <div className="text-primary-color">
-            <label className="block opacity-[0.5] text-[16px] font-[500] leading-[27px] mb-[8px]">
+            <label className="block opacity-[0.5] md:text-[16px] text-[14px] font-[500] leading-[27px] mb-[8px]">
               Expected Annual Appreciation
             </label>
             <div className="relative">
@@ -48,7 +48,7 @@ const HowMuchOverview = () => {
             </div>
           </div>
           <div className="text-primary-color">
-            <label className="block opacity-[0.5] text-[16px] font-[500] leading-[27px] mb-[8px]">
+            <label className="block opacity-[0.5] md:text-[16px] text-[14px] font-[500] leading-[27px] mb-[8px]">
               Net Dividend Yield
             </label>
             <div className="relative">
@@ -64,7 +64,7 @@ const HowMuchOverview = () => {
             </div>
           </div>
           <div className="text-primary-color">
-            <label className="block opacity-[0.5] text-[16px] font-[500] leading-[27px] mb-[8px]">
+            <label className="block opacity-[0.5] md:text-[16px] text-[14px] font-[500] leading-[27px] mb-[8px]">
               Holding Period
             </label>
             <div className="relative">
@@ -99,48 +99,48 @@ const HowMuchOverview = () => {
         className="md:max-w-[353px] rounded-[14px] bg-white"
         style={{ boxShadow: "0px 0px 11.7px 0px #00000026" }}
       >
-        <h3 className="text-primary-color text-[16px] font-[600] leading-[25.2px] px-[23px] pt-[24px] pb-[16px]">
+        <h3 className="text-primary-color text-[18px] font-[600] leading-[25.2px] px-[23px] pt-[24px] pb-[16px]">
           Overview
         </h3>
         <div className="flex flex-col justify-between">
           <ul className="text-primary-color border-t border-t-[#0C0839] border-opacity-[0.2] px-[25px] pt-[27px] pb-[31px]">
-            <li className="flex flex-col gap-[10px] justify-between pb-[25px] border-b border-b-[#000000] border-opacity-[0.1]">
-              <span className="text-[20px] font-[600] leading-[23px]">
+            <li className="flex flex-col gap-[10px] justify-between md:pb-[25px] pb-[18px] border-b border-b-[#000000] border-opacity-[0.1]">
+              <span className="md:text-[20px] text-[18px] font-[600] leading-[23px]">
                 14.86%
               </span>
-              <span className="text-[16px] leading-[16px] font-[500] opacity-[0.5]">
+              <span className="md:text-[16px] text-[14px] leading-[16px] font-[500] opacity-[0.5]">
                 Total Average Annualized Return
               </span>
             </li>
-            <li className="flex flex-col gap-[10px] justify-between py-[25px] border-b border-b-[#000000] border-opacity-[0.1]">
-              <span className="text-[20px] font-[600] leading-[23px]">
+            <li className="flex flex-col gap-[10px] justify-between py-[18px] border-b border-b-[#000000] border-opacity-[0.1]">
+              <span className="md:text-[20px] text-[18px] font-[600] leading-[23px]">
                 USD 17,832
               </span>
-              <span className="text-[16px] leading-[16px] font-[500] opacity-[0.5]">
+              <span className="md:text-[16px] text-[14px] leading-[16px] font-[500] opacity-[0.5]">
                 Total Rental Income
               </span>
             </li>
-            <li className="flex flex-col gap-[10px] justify-between py-[25px]  border-b border-b-[#000000] border-opacity-[0.1]">
-              <span className="text-[20px] font-[600] leading-[23px]">
+            <li className="flex flex-col gap-[10px] justify-between py-[18px]  border-b border-b-[#000000] border-opacity-[0.1]">
+              <span className="md:text-[20px] text-[18px] font-[600] leading-[23px]">
                 USD 4,000
               </span>
-              <span className="text-[16px] leading-[16px] font-[500] opacity-[0.5]">
+              <span className="md:text-[16px] text-[14px] leading-[16px] font-[500] opacity-[0.5]">
                 Expected Capital Appreciation
               </span>
             </li>
-            <li className="flex flex-col gap-[10px] justify-between py-[25px] border-b border-b-[#000000] border-opacity-[0.1]">
-              <span className="text-[20px] font-[600] leading-[23px]">
+            <li className="flex flex-col gap-[10px] justify-between py-[18px] border-b border-b-[#000000] border-opacity-[0.1]">
+              <span className="md:text-[20px] text-[18px] font-[600] leading-[23px]">
                 USD 21,832 (109.12%)
               </span>
-              <span className="text-[16px] leading-[16px] font-[500] opacity-[0.5]">
+              <span className="md:text-[16px] text-[14px] leading-[16px] font-[500] opacity-[0.5]">
                 Total Return
               </span>
             </li>
-            <li className="flex flex-col gap-[10px] justify-between py-[25px] border-b border-b-[#000000] border-opacity-[0.1]">
-              <span className="text-[20px] font-[600] leading-[23px]">
+            <li className="flex flex-col gap-[10px] justify-between py-[18px] border-b border-b-[#000000] border-opacity-[0.1]">
+              <span className="md:text-[20px] text-[18px] font-[600] leading-[23px]">
                 USD 41,832
               </span>
-              <span className="text-[16px] leading-[16px] font-[500] opacity-[0.5]">
+              <span className="md:text-[16px] text-[14px] leading-[16px] font-[500] opacity-[0.5]">
                 Total Expected Value After 6 Years
               </span>
             </li>

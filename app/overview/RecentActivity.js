@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const RecentActivity = () => {
@@ -18,11 +19,11 @@ const RecentActivity = () => {
     },
   ];
   return (
-    <div className="bg-white text-primary-color pb-[60px]">
-      <h2 className="text-[32px] leading-[40.32px] tracking-[-2%] font-[700] text-primary-color  pb-[25px] px-[25px]">
-        Payouts
+    <div className="bg-white text-primary-color pb-[60px] md:px-[15px] px-[12px]">
+      <h2 className="md:text-[32px] text-[25px] md:leading-[40.32px] tracking-[-2%] font-[700] text-primary-color  md:pb-[25px] pb-[18px]">
+        Recent Activity
       </h2>
-      <div className="overflow-x-auto px-[25px]">
+      <div className="overflow-x-auto">
         <table className="min-w-full bg-white rounded-[14px] pt-[32px] pb-[20px]">
           <thead>
             <tr className="text-[14px] leading-[16px] font-[500] text-primary-color opacity-[0.5]">
@@ -45,15 +46,18 @@ const RecentActivity = () => {
                   index !== recentActivity.length - 1 ? "border-b" : ""
                 }`}
               >
-                <td className="ps-[5px] py-[20px] flex items-center">
-                  <img
-                    src="/assets/icons/event-icon.svg"
-                    alt="event"
-                    className="w-[22px] h-[22px] rounded-full mr-[4px]"
-                  />
-                  <div className="pe-[20px] font-[600] text-[14px] leading-[23px] text-primary-color">
-                    {recentActivity.event}
-                  </div>
+                <td className="ps-[5px] py-[20px]">
+                  <span className="flex gap-[4px]">
+                    <Image
+                      src="/assets/icons/event-icon.svg"
+                      alt="event"
+                      width={22}
+                      height={22}
+                    />
+                    <span className="pe-[20px] font-[600] text-[14px] leading-[23px] text-primary-color">
+                      {recentActivity.event}
+                    </span>
+                  </span>
                 </td>
                 <td className="font-[600] text-[14px] leading-[23px] text-primary-color px-[23px] py-[20px] min-w-[126px]">
                   {recentActivity.price}
@@ -64,7 +68,7 @@ const RecentActivity = () => {
                 <td className="font-[600] text-[14px] leading-[23px] text-primary-color px-[23px] py-[20px]">
                   {recentActivity.to}
                 </td>
-                <td className="font-[600] text-[#8165EC] text-[14px] leading-[23px] px-[23px] py-[20px]">
+                <td className="font-[600] text-[#8165EC] text-[14px] px-[23px] py-[20px]">
                   {recentActivity.date}
                 </td>
               </tr>

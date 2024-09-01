@@ -2,39 +2,39 @@ import React from "react";
 
 const FinancialBreakdown = () => {
   return (
-    <div className="px-[25px] pb-[60px]">
-      <h1 className="text-[32px] leading-[40.32px] tracking-[-2%] font-[700] text-center text-primary-color mb-[40px]">
+    <div className="md:px-[15px] px-[12px] pb-[60px]">
+      <h1 className="md:text-[32px] text-[25px] leading-[40.32px] tracking-[-2%] font-[700] text-center text-primary-color mb-[40px]">
         Financial Breakdown
       </h1>
       <div className="flex flex-col md:flex-row gap-[30px] justify-center items-start">
         {/* Transaction Card */}
-        <div className="bg-[#F7F6FF] rounded-[14px] p-[25px] w-full md:w-1/2">
-          <div className="flex justify-between items-center pb-[20px] border-b border-opacity-[0.1] border-b-[#000000]">
+        <div className="bg-[#F7F6FF] rounded-[14px] md:px-[25px] md:py-[25px] py-[20px] px-[12px] w-full md:w-1/2">
+          <div className="flex justify-between items-center md:pb-[20px] pb-[18px] border-b border-opacity-[0.1] border-b-[#000000]">
             <div className="flex items-center">
-              <div className="bg-white p-[9px] rounded-[10px] mr-2">
+              <div className="bg-white p-[9px] rounded-[10px] md:mr-2 mr-1">
                 {/* Placeholder for Icon */}
                 <span className="w-[22px] h-[22px]">
                   <img src="/assets/icons/wallet-black.svg" alt="wallet" />
                 </span>
               </div>
               <div>
-                <h2 className="text-[16px] font-[600] leading-[22.68px] text-primary-color">
+                <h2 className="md:text-[16px] text-[15px] font-[600] leading-[22.68px] text-primary-color">
                   Transaction
                 </h2>
                 <a
                   href="#"
-                  className="text-[11px] font-[400] text-[#954AFC] leading-[14px]"
+                  className="md:text-[11px] text-[10px] font-[400] text-[#954AFC] leading-[14px]"
                 >
                   Details
                 </a>
               </div>
             </div>
-            <div className="flex items-center gap-[12px]">
-              <span className="text-[11px] font-[500] leading-[16px] text-primary-color opacity-[0.5]">
+            <div className="flex items-center md:gap-[12px] gap-[4px]">
+              <span className="sm:text-[11px] text-[9px] font-[500] leading-[16px] text-primary-color opacity-[0.5]">
                 Last Update: 2 days ago
               </span>
-              <div className="w-[34px] h-[34px] border border-[#0000001F] rounded-[7px] flex items-center justify-center">
-                <div className="h-[1.5px] w-[12px] bg-primary-color"></div>
+              <div className="md:w-[34px] w-[28px] md:h-[34px] h-[28px] border border-[#0000001F] rounded-[7px] flex items-center justify-center">
+                <div className="h-[1.5px] md:w-[12px] w-[10px] bg-primary-color"></div>
               </div>
             </div>
           </div>
@@ -139,17 +139,17 @@ const FinancialBreakdown = () => {
         </div>
 
         {/* Rental Card */}
-        <div className="bg-[#F7F6FF] rounded-[14px] p-[25px] w-full md:w-1/2">
-          <div className="flex justify-between items-center pb-[20px] border-b border-opacity-[0.1] border-b-[#000000]">
+        <div className="bg-[#F7F6FF] rounded-[14px] md:px-[25px] md:py-[25px] py-[20px] px-[12px] w-full md:w-1/2">
+          <div className="flex justify-between items-center md:pb-[20px] pb-[18px] border-b border-opacity-[0.1] border-b-[#000000]">
             <div className="flex items-center">
-              <div className="bg-white p-[9px] rounded-[10px] mr-2">
+              <div className="bg-white p-[9px] rounded-[10px] md:mr-2 mr-1">
                 {/* Placeholder for Icon */}
                 <span className="w-[22px] h-[22px]">
                   <img src="/assets/icons/file-icon.svg" alt="file" />
                 </span>
               </div>
               <div>
-                <h2 className="text-[16px] font-[600] leading-[22.68px] text-primary-color">
+                <h2 className="md:text-[16px] text-[15px] font-[600] leading-[22.68px] text-primary-color">
                   Rental
                 </h2>
                 <a
@@ -160,12 +160,12 @@ const FinancialBreakdown = () => {
                 </a>
               </div>
             </div>
-            <div className="flex items-center gap-[12px]">
-              <span className="text-[11px] font-[500] leading-[16px] text-primary-color opacity-[0.5]">
+            <div className="flex items-center md:gap-[12px] gap-[4px]">
+              <span className="sm:text-[11px] text-[9px] font-[500] leading-[16px] text-primary-color opacity-[0.5]">
                 Last Update: 2 days ago
               </span>
-              <div className="w-[34px] h-[34px] border border-[#0000001F] rounded-[7px] flex items-center justify-center">
-                <div className="h-[1.5px] w-[12px] bg-primary-color"></div>
+              <div className="md:w-[34px] w-[28px] md:h-[34px] h-[28px] border border-[#0000001F] rounded-[7px] flex items-center justify-center">
+                <div className="h-[1.5px] md:w-[12px] w-[10px] bg-primary-color"></div>
               </div>
             </div>
           </div>

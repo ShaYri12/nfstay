@@ -6,12 +6,13 @@ import HowMuchOverview from "./HowMuchOverview";
 import RecentActivity from "./RecentActivity";
 import FinancialBreakdown from "./FinancialBreakdown";
 import InviteFriends from "./InviteFriends";
+import DownloadConfidential from "./DownloadConfidential";
 
 const page = () => {
   return (
     <DashboardLayout>
-      <div className="bg-white text-primary-color">
-        <h2 className="text-[32px] leading-[40.32px] tracking-[-2%] font-[700] text-primary-color pt-[32px] pb-[32px] px-[25px]">
+      <div className="bg-white text-primary-color pt-[120px] lg:pt-[32px]">
+        <h2 className="text-[32px] leading-[40.32px] tracking-[-2%] font-[700] text-primary-color pb-[30px] md:px-[25px] px-[15px]">
           Overview
         </h2>
 
@@ -24,6 +25,8 @@ const page = () => {
         <RecentActivity />
 
         <FinancialBreakdown />
+
+        <DownloadConfidential />
 
         <InviteFriends />
       </div>
