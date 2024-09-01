@@ -2,10 +2,10 @@ import React from "react";
 
 const FinancialBreakdown = () => {
   return (
-    <div className="md:px-[15px] px-[12px] pb-[60px]">
-      <h1 className="md:text-[32px] text-[25px] leading-[40.32px] tracking-[-2%] font-[700] text-center text-primary-color mb-[40px]">
+    <div className="md:px-[25px] px-[12px] pb-[60px]">
+      <h2 className="md:text-[32px] text-[25px] leading-[40.32px] tracking-[-2%] font-[700] text-center text-primary-color mb-[40px]">
         Financial Breakdown
-      </h1>
+      </h2>
       <div className="flex flex-col md:flex-row gap-[30px] justify-center items-start">
         {/* Transaction Card */}
         <div className="bg-[#F7F6FF] rounded-[14px] md:px-[25px] md:py-[25px] py-[20px] px-[12px] w-full md:w-1/2">
