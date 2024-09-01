@@ -5,6 +5,7 @@ import Location from "./location";
 import HowMuchOverview from "./HowMuchOverview";
 import RecentActivity from "./RecentActivity";
 import FinancialBreakdown from "./FinancialBreakdown";
+import InviteFriends from "./InviteFriends";
 
 const page = () => {
   return (
@@ -23,6 +24,8 @@ const page = () => {
         <RecentActivity />
 
         <FinancialBreakdown />
+
+        <InviteFriends />
       </div>
     </DashboardLayout>
   );
