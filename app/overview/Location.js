@@ -1,11 +1,22 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import dynamic from "next/dynamic";
+import CheckoutModal from "../components/CheckoutModal";
+import CongratulationModal from "../components/CongratulationModal";
 
 const MapComponent = dynamic(() => import("../components/MapComponent"), {
   ssr: false,
 });
 
 const Location = () => {
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+  const [isCongratulationOpen, setIsCongratulationOpen] = useState(false);
+
+  const handleBuyNow = () => {
+    setIsCheckoutOpen(false);
+    setIsCongratulationOpen(true);
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-[35px] mt-[45px] md:px-[15px] px-[12px] pb-[60px]">
       {/* Location Section */}
@@ -52,7 +63,10 @@ const Location = () => {
 
         {/* Buy Button */}
         <div className="relative mt-[24px]">
-          <button className="w-full py-[16px] gap-[6px] rounded-full text-white text-[16px] leading-[20.16px] font-[600] bg-custom-gradient flex items-center justify-center">
+          <button
+            className="w-full py-[16px] gap-[6px] rounded-full text-white text-[16px] leading-[20.16px] font-[600] bg-custom-gradient flex items-center justify-center"
+            onClick={() => setIsCheckoutOpen(true)}
+          >
             Buy Now{" "}
             <span className="w-[22px] h-[22px]">
               <img src="/assets/icons/wallet-icon.svg" alt="wallet" />
@@ -73,6 +87,19 @@ const Location = () => {
           </div>
         </div>
       </div>
+
+      {/* Checkout Modal */}
+      <CheckoutModal
+        isOpen={isCheckoutOpen}
+        onClose={() => setIsCheckoutOpen(false)}
+        onBuyNow={handleBuyNow}
+      />
+
+      {/* Congratulation Modal */}
+      <CongratulationModal
+        isOpen={isCongratulationOpen}
+        onClose={() => setIsCongratulationOpen(false)}
+      />
     </div>
   );
 };
