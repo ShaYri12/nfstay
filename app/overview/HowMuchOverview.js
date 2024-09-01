@@ -1,5 +1,6 @@
 import React from "react";
 import { BiDollar } from "react-icons/bi";
+import LineChart from "../components/LineChart";
 
 const HowMuchOverview = () => {
   return (
@@ -83,7 +84,9 @@ const HowMuchOverview = () => {
         </div>
         <div className="px-[25px] pt-[20px] bg-white">
           {/* Placeholder for Chart */}
-          <div className="bg-gradient-to-r from-blue-200 to-blue-400 h-[247.26px]"></div>
+          <div className="min-h-[247.26px]">
+            <LineChart />
+          </div>
           <div className="flex max-w-[533px] mx-auto items-center justify-center py-[18px]">
             <p className="text-center text-[12px] font-[500] leading-[16px] text-primary-color text-opacity-[0.5]">
               This calculator is for illustrative purposes only. Buying a
