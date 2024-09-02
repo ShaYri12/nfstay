@@ -127,11 +127,11 @@ const MyLineChart = () => {
   return (
     <div className="relative w-full h-full">
       <Line ref={chartRef} data={data} options={options} />
-      <div className="absolute bottom-12 left-2 font-[600] text-[16px] text-primary-color leading-[20.16px]">
+      <div className="absolute bottom-14 left-2 font-[600] text-[16px] text-primary-color leading-[20.16px]">
         USD 20,000
       </div>
       <div className="absolute top-1 right-4 font-[600] text-[16px] text-primary-color leading-[20.16px]">
-        USD 20,000
+        USD 27,320
       </div>
     </div>
   );

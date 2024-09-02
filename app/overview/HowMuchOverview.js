@@ -4,7 +4,7 @@ import LineChart from "../components/LineChart";
 
 const HowMuchOverview = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-[26px] md:px-[15px] px-[12px] pb-[60px]">
+    <div className="flex flex-col lg:flex-row gap-[26px] md:px-[15px] px-[12px] pb-[60px]">
       {/* Left Section */}
       <div
         className="flex-grow rounded-[14px] bg-white"
@@ -99,7 +99,7 @@ const HowMuchOverview = () => {
 
       {/* Right Section */}
       <div
-        className="md:max-w-[353px] rounded-[14px] bg-white"
+        className="lg:max-w-[353px] rounded-[14px] bg-white"
         style={{ boxShadow: "0px 0px 11.7px 0px #00000026" }}
       >
         <h3 className="text-primary-color text-[18px] font-[600] leading-[25.2px] px-[23px] pt-[24px] pb-[16px]">
