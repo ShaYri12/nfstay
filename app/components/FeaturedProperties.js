@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 const FeaturedProperties = () => {
@@ -95,7 +96,7 @@ const FeaturedProperties = () => {
                                     <h4 className="text-[#0C0839] text-[14px] leading-[21px] font-medium opacity-50">Price of Real Estate</h4>
                                     <h2 className="text-[#0C0839] text-[20px] leading-[29px] tracking-[-0.01em] font-bold">{property.propertyPrice}</h2>
                                 </div>
-                                <button className="bg-custom-four w-[126px] h-[40px] rounded-[1111px] text-white text-[16px] leading-[20.16px] font-semibold">Buy Now</button>
+                                <Link href='/details' target='_blank' className="flex items-center justify-center bg-custom-four w-[126px] h-[40px] rounded-[1111px] text-white text-[16px] leading-[20.16px] font-semibold">Buy Now</Link>
                             </div>
                         </div>
                     </div>

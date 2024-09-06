@@ -1,5 +1,6 @@
-"use client";
-import React from "react";
+'use client'
+// components/Graph.js  
+import React from 'react';
 import {
   AreaChart,
   Area,
@@ -7,32 +8,32 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-} from "recharts";
+} from 'recharts';
 
 const data = [
-  { name: "A", value: 500 },
-  { name: "B", value: 300 },
-  { name: "C", value: 200 },
-  { name: "D", value: 278 },
-  { name: "E", value: 589 },
-  { name: "F", value: 239 },
-  { name: "G", value: 349 },
-  { name: "H", value: 300 },
-  { name: "I", value: 400 },
-  { name: "J", value: 900 },
-  { name: "J", value: 600 },
-  { name: "J", value: 700 },
-  { name: "J", value: 800 },
-  { name: "J", value: 500 },
-  { name: "J", value: 900 },
-  { name: "J", value: 600 },
+  { name: 'A', value:500 },
+  { name: 'B', value: 300 },
+  { name: 'C', value: 200 },
+  { name: 'D', value: 278 },
+  { name: 'E', value: 589 },
+  { name: 'F', value: 239 },
+  { name: 'G', value: 349 },
+  { name: 'H', value: 300 },
+  { name: 'I', value: 400 },
+  { name: 'J', value: 900 },
+  { name: 'J', value: 600 },
+  { name: 'J', value: 700 },
+  { name: 'J', value: 800 },
+  { name: 'J', value: 500 },
+  { name: 'J', value: 900 },
+  { name: 'J', value: 600 },
 ];
 
 const Graph = () => {
   return (
-    <div className="w-full">
-      <ResponsiveContainer width="100%" height={500}>
-        <AreaChart data={data}>
+    <div className='w-full'>
+      <ResponsiveContainer width="100%" height={500} >
+        <AreaChart data={data} >
           <XAxis dataKey="name" hide />
           <YAxis hide />
           <Tooltip />

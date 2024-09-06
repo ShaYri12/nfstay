@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IoMenu } from "react-icons/io5";
-import { FiX } from "react-icons/fi";
 import { usePathname } from "next/navigation";
+import Notification from "./Notification";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,6 +15,34 @@ const Header = () => {
 
   const pathname = usePathname();
 
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+  const notificationRef = useRef(null);
+
+  const toggleNotification = () => {
+    setIsNotificationOpen(!isNotificationOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (
+      notificationRef.current &&
+      !notificationRef.current.contains(event.target)
+    ) {
+      setIsNotificationOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isNotificationOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isNotificationOpen]);
+
   const sidebarLinks = [
     {
       title: "General",
@@ -24,11 +52,11 @@ const Header = () => {
           label: "Dashboard",
           icon: "/assets/dashboard.svg",
         },
-        // {
-        //   href: "/box",
-        //   label: "Inbox",
-        //   icon: "/assets/inbox.svg",
-        // },
+        {
+          href: "/chatapp",
+          label: "Notification",
+          icon: "/assets/inbox.svg",
+        },
         {
           href: "/settings",
           label: "Settings",
@@ -47,22 +75,22 @@ const Header = () => {
         {
           href: "/marketplace",
           label: "Marketplace",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-5.svg",
         },
         {
           href: "/upcoming",
           label: "Upcoming",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-6.svg",
         },
         {
           href: "/secondary-market",
           label: "Secondary Market",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-7.svg",
         },
         {
           href: "/favorites",
           label: "Favorites",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-8.svg",
         },
       ],
     },
@@ -72,17 +100,17 @@ const Header = () => {
         {
           href: "/overview",
           label: "Overview",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-9.svg",
         },
         {
           href: "/farm-liquidity",
-          label: "Farm (Liquidity)",
-          icon: "/assets/dashboard.svg",
+          label: "Liquidity Pool",
+          icon: "/assets/icons/sidebar-10.svg",
         },
         {
           href: "/printer",
           label: "Printer",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-11.svg",
         },
       ],
     },
@@ -90,14 +118,19 @@ const Header = () => {
       title: "My Profile",
       links: [
         {
-          href: "/Portfolio",
+          href: "/my-properties",
           label: "Portfolio",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-12.svg",
+        },
+        {
+          href: "/voting",
+          label: "Governance",
+          icon: "/assets/icons/star.svg",
         },
         {
           href: "/Payouts",
           label: "Payouts",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-13.svg",
         },
       ],
     },
@@ -107,7 +140,7 @@ const Header = () => {
         {
           href: "/Estate Agent",
           label: "Estate Agent",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-14.svg",
         },
       ],
     },
@@ -122,22 +155,33 @@ const Header = () => {
       </div>
 
       <div className="flex items-center gap-5">
-        <button>
+        <Link href="/settings">
           <Image
             src="/assets/icons/setting-icon.svg"
             alt="setting-icon"
             width={28}
             height={28}
           />
-        </button>
-        <button>
-          <Image
-            src="/assets/icons/bell-icon.svg"
-            alt="bell-icon"
-            width={28}
-            height={28}
-          />
-        </button>
+        </Link>
+        <div className="flex items-center justify-center relative">
+          <button onClick={toggleNotification}>
+            <Image
+              src="/assets/icons/bell-icon.svg"
+              alt="bell-icon"
+              width={28}
+              height={28}
+            />
+          </button>
+          {/* notification */}
+          {isNotificationOpen && (
+            <div
+              ref={notificationRef}
+              className="notification z-[99999] w-[320px] sm:w-[390px] absolute top-14 sm:-right-14 -right-40 py-[22px] px-[24px] border border-[#00000026]"
+            >
+              <Notification />
+            </div>
+          )}
+        </div>
         <button className="bg-custom-gradient text-white h-[50px] w-[170px] px-[14px] rounded-[1111px] md:text-[14px] text-[16px] font-jakarta leading-[20px] font-semibold flex items-center justify-between">
           <Image
             src="/assets/profile.svg"
@@ -152,16 +196,16 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-[100px] left-0 w-full h-full bg-white shadow-lg flex-col flex transform py-6 px-4 ${
+        className={`fixed top-[100px] left-0 w-full h-full overflow-scroll bg-white shadow-lg flex-col flex transform py-6 pb-72 px-4 ${
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-500 ease-in-out z-50`}
       >
-        <div className="mb-8 flex items-center gap-3">
+        <div className="mb-6 flex items-center gap-3">
           <Image src="/assets/Logo.svg" alt="avatar" width={149} height={32} />
         </div>
 
-        <div className="my-14">
-          <div className="flex flex-col gap-10 w-full">
+        <div className="my-4 sm:my-14">
+          <div className="flex flex-col gap-6 w-full">
             {sidebarLinks.map((section, index) => (
               <div key={index} className="flex flex-col gap-[15px] w-full">
                 <h3 className="text-[16px] font-bold text-[#0C0839] font-jakarta">

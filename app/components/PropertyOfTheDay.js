@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const PropertyOfTheDay = () => {
@@ -38,7 +39,7 @@ const PropertyOfTheDay = () => {
               <h2 className='text-[#0C0839] text-[20px] xs:text-[24px] leading-[30px] font-semibold tracking-[-0.02em]'>5,700,000 USD</h2>
             </div>
           </div>
-          <button className='bg-[#954AFC] rounded-full w-full xs:w-[140px] h-[50px] text-white text-[20px] leading-[25px] font-semibold xs:mt-0 mt-5'>Buy Now</button>
+          <Link href='/details' className='flex items-center justify-center bg-[#954AFC] rounded-full w-full xs:w-[140px] h-[50px] text-white text-[20px] leading-[25px] font-semibold xs:mt-0 mt-5'>Buy Now</Link>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import HeaderHome from "./components/HeaderHome";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <HeaderHome />
       <div className="bg-white max-w-[1440px] mx-auto h-full px-3.5 sm:px-6 py-9 w-full">
         <div className="bg-[#954AFC] rounded-[32px] xlg:pr-[54px] w-full grid grid-cols-1 xlg:grid-cols-2 justify-items-center xlg:items-end">
@@ -27,6 +27,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

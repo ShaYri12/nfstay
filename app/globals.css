@@ -18,7 +18,6 @@
 
 body {
   overflow-x: hidden;
-  /* font-family: "Poppins", sans-serif; */
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -63,10 +62,6 @@ body {
   transform: translateY(-20px);
   transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 }
-/* 
-table {
-  overflow-x: hidden;
-} */
 
 /* ToggleSwitch */
 .toggleSwitch {
@@ -92,6 +87,10 @@ input:checked + .toggleSwitch {
 
 input:checked + .toggleSwitch::before {
   transform: translateX(15.5px);
+}
+
+.shadow-custom-one {
+  box-shadow: 0px 2.18px 6.55px 0px #00000012, 0px 0.72px 2.16px 0px #00000012;
 }
 
 /* voting page */
@@ -132,4 +131,22 @@ input:checked + .toggleSwitch::before {
     max-width: 100%;
     min-width: 100%;
   }
+}
+
+.notification {
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0px 0.72px 2.161px -0.848px rgba(0, 0, 0, 0.07),
+    0px 2.185px 6.555px -1.697px rgba(0, 0, 0, 0.07),
+    0px 5.776px 17.327px -2.545px rgba(0, 0, 0, 0.06),
+    0px 18.098px 54.294px -3.393px rgba(0, 0, 0, 0.02);
+}
+
+.payouts {
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0px 0.72px 2.161px -0.848px rgba(0, 0, 0, 0.07),
+    0px 2.185px 6.555px -1.697px rgba(0, 0, 0, 0.07),
+    0px 5.776px 17.327px -2.545px rgba(0, 0, 0, 0.06),
+    0px 18.098px 54.294px -3.393px rgba(0, 0, 0, 0.02);
 }

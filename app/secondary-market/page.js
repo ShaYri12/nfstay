@@ -48,21 +48,12 @@ const SecondaryMarket = () => {
         <div className='px-3 md:px-[25px]  pt-[120px] lg:pt-[32px]'>
             <h1 className='text-[#0C0839] text-[28px] sm:text-[32px] leading-[40.32px] tracking-[-0.02em] font-bold mb-1.5'>Auctions</h1>
             <p className='text-[#0C0839] text-[16px] sm:text-[18px] leading-[27px] font-medium opacity-50'>Get real estate NFTs at the lowest price.</p>
-            
-            <div className='my-10'>
-                <h1>Filters</h1>
-            </div>
 
-            <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[25px]'>
+            <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[25px]'>
                 {properties.map((property, index) => (
                     <div key={index} className="relative bg-white rounded-[16px] shadow-lg pb-3.5 border border-[#0C08391A]">
                         <div className="relative rounded-t-[16px]">
                             <img src={property.image} alt="Property Image" className="w-full h-[200px] object-cover rounded-t-[16px]" />
-
-                            <div className="pl-4 absolute -bottom-[18px] sm:-bottom-[18px] w-[206px] py-2 -left-2 z-30 bg-[#954AFC] text-white rounded-r-[8px] shadow-lg rounded-t-[8px] flex items-start flex-col">
-                                <h4 className='text-[12px] leading-[15px] tracking-[-0.01em] font-medium'>Auction Ends in</h4>
-                                <h2 className='text-[20px] leading-[25px] font-bold tracking-[-0.01em]'>00:00:00:00</h2>
-                            </div>
 
                             <button className="absolute active:scale-100 scale-105 top-2 sm:top-2 right-2 bg-white p-2 rounded-full shadow-sm z-40">
                                 <img src="/assets/icons/favorited.svg" alt="favorited" width={16} height={16} />

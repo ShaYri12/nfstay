@@ -13,11 +13,11 @@ const Sidebar = () => {
           label: "Dashboard",
           icon: "/assets/dashboard.svg",
         },
-        // {
-        //   href: "/chatapp",
-        //   label: "Inbox",
-        //   icon: "/assets/inbox.svg",
-        // },
+        {
+          href: "/chatapp",
+          label: "Notification",
+          icon: "/assets/inbox.svg",
+        },
         {
           href: "/settings",
           label: "Settings",
@@ -36,22 +36,22 @@ const Sidebar = () => {
         {
           href: "/marketplace",
           label: "Marketplace",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-5.svg",
         },
         {
           href: "/upcoming",
           label: "Upcoming",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-6.svg",
         },
         {
           href: "/secondary-market",
           label: "Secondary Market",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-7.svg",
         },
         {
           href: "/favorites",
           label: "Favorites",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-8.svg",
         },
       ],
     },
@@ -61,17 +61,17 @@ const Sidebar = () => {
         {
           href: "/overview",
           label: "Overview",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-9.svg",
         },
         {
           href: "/farm-liquidity",
-          label: "Farm (Liquidity)",
-          icon: "/assets/dashboard.svg",
+          label: "Liquidity Pool",
+          icon: "/assets/icons/sidebar-10.svg",
         },
         {
           href: "/printer",
           label: "Printer",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-11.svg",
         },
       ],
     },
@@ -79,14 +79,19 @@ const Sidebar = () => {
       title: "My Profile",
       links: [
         {
-          href: "/Portfolio",
+          href: "/my-properties",
           label: "Portfolio",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-12.svg",
         },
         {
-          href: "/Payouts",
+          href: "/voting",
+          label: "Governance",
+          icon: "/assets/icons/star.svg",
+        },
+        {
+          href: "/payouts",
           label: "Payouts",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-13.svg",
         },
       ],
     },
@@ -96,7 +101,7 @@ const Sidebar = () => {
         {
           href: "/Estate Agent",
           label: "Estate Agent",
-          icon: "/assets/dashboard.svg",
+          icon: "/assets/icons/sidebar-14.svg",
         },
       ],
     },

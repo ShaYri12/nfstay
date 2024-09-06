@@ -8,6 +8,66 @@ const FarmLiquidity = () => {
   return (
     <DashboardLayout>
       <div className="w-full p-4 pt-32 lg:pt-9">
+        <div className="pb-10 flex items-start justify-between md:flex-row flex-col gap-5">
+          <div>
+            <h1 className="text-[#0C0839] text-[30px] font-bold tracking-[-0.64px]">
+              Farm
+            </h1>
+            <h3 className="text-[#0C0839] leading-[27px] font-medium text-[18px] opacity-50">
+              Earn $STAY by providing liquidity
+            </h3>
+          </div>
+          <div className="flex items-center gap-4 flex-wrap justify-center">
+            <div className="border-2 border-[#0C0839] rounded-[14px] border-opacity-10 p-3.5 flex items-start gap-3">
+              <Image
+                src="/assets/icons/your-liquidity.svg"
+                alt="your-liquidity"
+                width={22}
+                height={22}
+              />
+              <div className="mt-[-5px]">
+                <h2 className="text-[#0C0839] text-[24px] leading-[32px] font-semibold">
+                  0.00$
+                </h2>
+                <h3 className="text-[#0C0839] text-[16px] leading-[21px] font-medium opacity-50">
+                  Your Liquidity
+                </h3>
+              </div>
+            </div>
+            <div className="border-2 border-[#0C0839] rounded-[14px] border-opacity-10 p-3.5 flex items-start gap-3">
+              <Image
+                src="/assets/icons/apr.svg"
+                alt="your-liquidity"
+                width={22}
+                height={22}
+              />
+              <div className="mt-[-5px]">
+                <h2 className="text-[#0C0839] text-[24px] leading-[32px] font-semibold">
+                  93.52%
+                </h2>
+                <h3 className="text-[#0C0839] text-[16px] leading-[21px] font-medium opacity-50">
+                  APR
+                </h3>
+              </div>
+            </div>
+            <div className="border-2 border-[#0C0839] rounded-[14px] border-opacity-10 p-3.5 flex items-start gap-3">
+              <Image
+                src="/assets/icons/dollar.svg"
+                alt="your-liquidity"
+                width={22}
+                height={22}
+              />
+              <div className="mt-[-5px]">
+                <h2 className="text-[#0C0839] text-[24px] leading-[32px] font-semibold">
+                  $0.00
+                </h2>
+                <h3 className="text-[#0C0839] text-[16px] leading-[21px] font-medium opacity-50">
+                  Unclaimed Rewards
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="flex items-center gap-2">
           <Image
             src="/assets/icons/usdt-btc.svg"

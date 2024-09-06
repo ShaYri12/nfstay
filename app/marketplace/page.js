@@ -54,12 +54,8 @@ const Marketplace = () => {
         <div className='px-3 md:px-[25px] pt-[120px] lg:pt-[32px]'>
             <h1 className='text-[#0C0839] text-[28px] sm:text-[32px] leading-[40.32px] tracking-[-0.02em] font-bold mb-1.5'>Marketplace</h1>
             <p className='text-[#0C0839] text-[16px] sm:text-[18px] leading-[27px] font-medium opacity-50'>Buy and Sell Real Estate NFTs Within Seconds</p>
-            
-            <div className='my-10'>
-                <h1>Filters</h1>
-            </div>
 
-            <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[25px]'>
+            <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-[25px]'>
                 {properties.map((property, index) => (
                     <div key={index} className="relative bg-white rounded-[16px] shadow-lg pb-3.5 border border-[#0C08391A]">
                         <div className="relative rounded-t-[16px]">
