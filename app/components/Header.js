@@ -138,7 +138,7 @@ const Header = () => {
       title: "Join the team",
       links: [
         {
-          href: "/Estate Agent",
+          href: "/estate-agent",
           label: "Estate Agent",
           icon: "/assets/icons/sidebar-14.svg",
         },
@@ -152,6 +152,16 @@ const Header = () => {
         <button onClick={toggleMobileMenu} className="lg:hidden block">
           <IoMenu className="w-[35px] h-[35px]" />
         </button>
+        {pathname === "/details" && (
+          <Link href="/dashboard">
+            <Image
+              src="/assets/Logo.svg"
+              alt="avatar"
+              width={149}
+              height={32}
+            />
+          </Link>
+        )}
       </div>
 
       <div className="flex items-center gap-5">

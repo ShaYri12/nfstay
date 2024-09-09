@@ -24,7 +24,7 @@ const Sidebar = () => {
           icon: "/assets/settings.svg",
         },
         {
-          href: "/Docs",
+          href: "/docs",
           label: "Docs",
           icon: "/assets/docs.svg",
         },
@@ -99,7 +99,7 @@ const Sidebar = () => {
       title: "Join the team",
       links: [
         {
-          href: "/Estate Agent",
+          href: "/estate-agent",
           label: "Estate Agent",
           icon: "/assets/icons/sidebar-14.svg",
         },
